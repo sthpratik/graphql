@@ -1,0 +1,24 @@
+{
+  "name": "graphqlserver",
+  "version": "1.0.0",
+  "description": "Test GraphQL",
+  "main": "dist/app.js",
+  "type": "module",
+  "scripts": {
+    "start": " tsc | tsc-watch --onSuccess 'node ./dist/app.js'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Manish Shrestha",
+  "license": "ISC",
+  "dependencies": {
+    "@apollo/datasource-rest": "^4.3.2",
+    "@apollo/server": "^4.3.0",
+    "got": "^12.5.3",
+    "graphql": "^16.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.17",
+    "tsc-watch": "^6.0.0",
+    "typescript": "^4.9.4"
+  }
+}
