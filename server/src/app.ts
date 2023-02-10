@@ -1,33 +1,7 @@
 import { ApolloServer } from '@apollo/server';
 import { startStandaloneServer } from '@apollo/server/standalone';
-//import { getProducts } from './products';
-//import { getCarts } from './carts';
-import got from 'got';
-
-
-
-export const readData = async (url: string): Promise<any> => await got.get(url).json();
-
-
-export const getProducts = async () => {
-  let data = await readData('https://dummyjson.com/products');
-  //console.log(data);
-  return data.products;
-}
-
-export const getProductsInfo = async (id: String) => {
-  let data = await readData('https://dummyjson.com/products');
-  console.log(id);
-  return data.products.find((x: any) => x.id == id);
-}
-
-export const getCarts = async () => {
-  let data = await readData('https://dummyjson.com/carts');
-  //console.log(data);
-  return data.carts;
-}
-
-
+import { getProducts, getProductsInfo } from './products.js';
+import { getCarts } from './carts.js';
 
 // A schema is a collection of type definitions (hence "typeDefs")
 // that together define the "shape" of queries that are executed against
