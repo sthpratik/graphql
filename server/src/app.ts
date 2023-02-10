@@ -16,6 +16,9 @@ const typeDefs = `
     title: String
     description: String
     category: String
+    price: String
+    quantity: String
+    discountPercentage: String
   }
 
   type Cart {
@@ -44,7 +47,7 @@ const resolvers = {
   Query: {
     products: () => getProducts(),
     carts: () => getCarts(),
-    greeting: () => 'Hello World',
+    greeting: () => 'Hello World Test',
     product: (_root: any, { id }: any) => getProductsInfo(id)
   },
 
